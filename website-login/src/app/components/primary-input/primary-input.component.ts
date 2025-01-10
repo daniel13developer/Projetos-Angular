@@ -2,7 +2,7 @@ import { Text } from '@angular/compiler';
 import { Component, Input, input } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-type InputTypes = "text" | "emai" | "password"
+type InputTypes = "text" | "email" | "password"
 
 @Component({
   selector: 'app-primary-input',
