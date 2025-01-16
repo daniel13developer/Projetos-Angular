@@ -5,6 +5,7 @@ secondaryBtnText = "Signup Now"
 >
 <form [formGroup]="loginForm">
     <app-primary-input
+    formArrayName="email"
     inputName="email"
     type="email"
     label="Email"
@@ -13,13 +14,15 @@ secondaryBtnText = "Signup Now"
         <img class="icone-email" src="../../../assets/img/email-icon.png" alt="Icone do e-mail" srcset="">
     </app-primary-input>
 
-    <app-primary-input    
+    <app-primary-input  
+    formArrayName="password"
     inputName="password"
     type="password"
     label="Your Password"       
     >
         <img class="icone-email" src="../../../assets/img/cadeado.png" alt="Icone do e-mail" srcset="">
     </app-primary-input>
+    <span>Forgot password</span>
    
 </form>
 </app-default-login-layout>
