@@ -20,10 +20,12 @@ type InputTypes = "text" | "email" | "password"
   styleUrl: './primary-input.component.scss'
 })
 export class PrimaryInputComponent implements ControlValueAccessor { 
+  
   @Input() type: InputTypes = "text";  
   @Input() placeholder: string ="";
   @Input() label: string = "";
-  @Input() inputName: string = "";
+  @Input() inputName: string = ""
+  
 
   value: string = ''
   OnChange: any = () => {}
@@ -46,9 +48,7 @@ export class PrimaryInputComponent implements ControlValueAccessor {
     this.OnTouched = fn;
   }
 
-  setDisabledState?(isDisabled: boolean): void {
-   
-  }
+  setDisabledState?(isDisabled: boolean): void {}
 
 }
 
