@@ -12,6 +12,9 @@ import { LoginService } from '../../services/login.service';
     ReactiveFormsModule,
     PrimaryInputComponent,
   ],
+  providers: [
+    LoginService
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -34,10 +37,15 @@ export class LoginComponent {
 
   submit(){
     this.loginService.login(this.myForm.value.email, this.myForm.value.password).subscribe({
-      next: () =>console.log("sucesso!"),
+      next: () => console.log("sucesso!"),
       error: () => console.log("error")
 
     })
+  }
+
+  navigate(){
+    
+    this.router.navigate(["signup"])
   }
 
   // submit(): void {
@@ -49,11 +57,11 @@ export class LoginComponent {
   //   }
   // }
 
-  navigate(){
-    // console.log("testando");
-    // console.log(this.myForm.value);
-    this.router.navigate(["signup"])
+  // navigate(){
+  //   // console.log("testando");
+  //   // console.log(this.myForm.value);
+  //   this.router.navigate(["signup"])
 
-  } 
+  // } 
 
 }
