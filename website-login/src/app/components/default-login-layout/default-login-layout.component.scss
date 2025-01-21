@@ -59,6 +59,10 @@ button {
     padding: 12px 24px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombra */;
     cursor: pointer;
+
+    &:disabled {
+        opacity: 0.5;                
+    }
      
 
     &.btn-primary{

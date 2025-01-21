@@ -3,7 +3,15 @@
         <img src="/assets/img/logo.png" class="logo" alt="logo cabeça de robo">
         <h2>{{ title }}</h2>
         <ng-content></ng-content>
-        <button class="btn-primary" (click)="submit()">{{ primaryBtnText }}</button>
+        <button
+         class="btn-primary" 
+         (click)="submit()"
+         [disabled]="disablePrimaryBtn"
+
+
+         >
+         {{ primaryBtnText }}
+        </button>
         <span>Or</span>
         <button class="btn-secondary" (click)="navigate()">>{{ secondaryBtnText }}</button>
     </section>

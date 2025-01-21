@@ -20,6 +20,7 @@ import { LoginService } from '../../services/login.service';
 })
 export class LoginComponent {
   myForm: FormGroup;
+  toastService: any;
 
   constructor(
     private fb: FormBuilder, 
@@ -37,8 +38,8 @@ export class LoginComponent {
 
   submit(){
     this.loginService.login(this.myForm.value.email, this.myForm.value.password).subscribe({
-      next: () => console.log("sucesso!"),
-      error: () => console.log("error")
+      next: () => this.toastService.success("Login realizado com sucesso!"),
+      error: () => this.toastService.error(" Erro: falla na tentativa de login, tente novamente!")
 
     })
   }
