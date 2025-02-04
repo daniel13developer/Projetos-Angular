@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   imports: [
     DefaultLoginLayoutComponent,
     ReactiveFormsModule,
@@ -15,11 +15,11 @@ import { LoginService } from '../../services/login.service';
   providers: [
     LoginService
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.scss'
 })
-export class LoginComponent {
-  myForm: FormGroup;
+export class SignupComponent {
+  signupForm: FormGroup;
   toastService: any;
 
   constructor(
@@ -28,24 +28,28 @@ export class LoginComponent {
     private loginService: LoginService
   
   ){
-    this.myForm = this.fb.group({
+    this.signupForm = this.fb.group({
+
+    name: ['', [Validators.minLength(3)]],      
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.minLength(6)]],
+    passwordConfirm: ['', [Validators.required]],
 
     });
 
   }
-
+ 
   submit(){
-    this.loginService.login(this.myForm.value.email, this.myForm.value.password).subscribe({
+    
+    this.loginService.cadastro(this.signupForm.value.name ,this.signupForm.value.email, this.signupForm.value.password, this.signupForm.value.passwordConfirm).subscribe({
       next: () => this.toastService.success("Login realizado com sucesso!"),
-      error: () => this.toastService.error(" Erro: falla na tentativa de login, tente novamente!")
+      error: () => this.toastService.error("Erro: falla na tentativa de login, tente novamente!"),     
 
     })
   }
 
   navigate(){
     
-    this.router.navigate(["signup"])
+    this.router.navigate(["login"])
   }
 }

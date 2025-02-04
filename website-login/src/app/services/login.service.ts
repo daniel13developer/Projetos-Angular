@@ -20,4 +20,14 @@ export class LoginService {
     )
   }
 
+  cadastro(name: string, email: string, password: string, passwordConfirm: boolean){
+    return this.httpClient.post<LoginResponse>("/signup", {name, email, password, passwordConfirm}).pipe(
+      tap((value) => {
+          sessionStorage.setItem("auth-token", value.token),
+          sessionStorage.setItem("username", value.name)
+        })
+
+    )
+  }
+
 }
