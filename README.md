@@ -1,4 +1,4 @@
-<h1 align="center">Repositório para desenvolvimentos de Projetos Fullstack utilizando as tecnoligias Framework Angular com  Node</h1>
+<h1 align="center">Repositório para desenvolvimentos de Projetos Fullstack utilizando as tecnoligias Framework Angular e Node</h1>
 
 # Projetos-Inicial
 A ideia inicial do projeto foi desenvolver um aplicação web com frontend e backend integradas ultilizando o framework Angular e  Node.
@@ -9,6 +9,13 @@ A ideia inicial do projeto foi desenvolver um aplicação web com frontend e bac
 * Node: v22.11.0
 * npm (atualizado)
 * Framework Fastify
+
+## Extensões do Visual Code utilizadas:
+* Anugular Language Seervice
+* Node.js Modeules Intellisense
+* mithril Emmmet
+* Omni Theme
+
 
 
 ### Links novos conteúdos e desenvolvimento
