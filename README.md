@@ -1,1 +1,16 @@
-# Projetos-Angular
+<h1 align="center">Repositório para desenvolvimentos de Projetos Fullstack utilizando as tecnoligias Framework Angular com  Node</h1>
+
+# Projetos-Inicial
+A ideia inicial do projeto foi desenvolver um aplicação web com frontend e backend integradas ultilizando o framework Angular e  Node.
+
+## Feramentas utilizadas:
+* Microsoft Visual code
+* Angular na versão 19
+* Node: v22.11.0
+* npm (atualizado)
+* Framework Fastify
+
+
+### Links novos conteúdos e desenvolvimento
+
+Para novos conteúdos [Daniel Andrade](https://github.com/daniel13developer).
