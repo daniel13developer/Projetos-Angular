@@ -12,7 +12,11 @@ export class DefaultLoginLayoutComponent {
   @Input() secondaryBtnText: string = "";
   @Input() disablePrimaryBtn: boolean = true;
   @Output("submit") onSubmit = new EventEmitter();
-  @Output("navigate") onNavigate = new EventEmitter();  
+  @Output("navigate") onNavigate = new EventEmitter(); 
+  
+  @Output("submitHome") onSubmitHome = new EventEmitter();
+  @Output("navigateHome") onNavigateHome = new EventEmitter();
+  router: any;
 
   submit(){
     this.onSubmit.emit();
@@ -21,6 +25,12 @@ export class DefaultLoginLayoutComponent {
   navigate(){
     this.onNavigate.emit();
   } 
+
+  navigateHome() {
+    //throw new Error('Method not implemented.');
+    console.log('navigate');
+    this.router.navigateHome(["signup"]);
+  }
 
 
 }
